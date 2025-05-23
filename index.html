@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Gineco-Pediátrica</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefeff url('https://img.freepik.com/vector-gratis/fondo-garabato-abstracto-plano_23-2149336498.jpg?semt=ais_hybrid&w=740') repeat;
+      background-size: cover;
+    }
+    header {
+      background-color: #f6e9f7;
+      padding: 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: #7a4f84;
+    }
+    .accordion-item {
+      margin-bottom: 1rem;
+    }
+    .accordion-title {
+      cursor: pointer;
+      background-color: #f3e4f7;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .accordion-title:hover {
+      background-color: #e3d2eb;
+    }
+    .accordion-content {
+      display: none;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      border-top: 2px solid #e3d2eb;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, select, textarea, button {
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+    button {
+      background-color: #c084c4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #a66ca9;
+    }
+    .success-message {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://github.com/4nja06/proyecto/blob/main/simple-modern-hospital-logo-with-healthcare-medical-template-vector.jpg?raw=true" alt="Logo Clínica">
+  </header>
+  <img class="banner" src="https://github.com/4nja06/proyecto/blob/main/Por-segundo-ano-SS-licita-servicio-de-ginecologia-y-pediatria.jpg?raw=true" alt="Banner">
+  <div class="container">
+    <div class="card">
+      <h2>¿Quiénes somos?</h2>
+      <p>Clínica enfocada en salud ginecológica, obstétrica y pediátrica. Brindamos atención con calidez, ética profesional y trato humano, especialmente a mujeres, infancias y familias.</p>
+      <h2>Misión</h2>
+      <p>Brindar atención médica especializada, accesible y con enfoque integral a mujeres, gestantes e infancias.</p>
+      <h2>Visión</h2>
+      <p>Ser un referente en salud femenina e infantil, por nuestra excelencia médica, cercanía y compromiso con la comunidad.</p>
+      <h2>Valores</h2>
+      <ul>
+        <li>Ética profesional</li>
+        <li>Empatía</li>
+        <li>Diversidad</li>
+        <li>Honestidad</li>
+        <li>Responsabilidad</li>
+        <li>Enfoque de género y niñez</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Especialidades Médicas</h2>
+      <div class="accordion-item">
+        <div class="accordion-title">👩‍⚕️ Ginecología</div>
+        <div class="accordion-content">Salud reproductiva, planificación familiar, anticoncepción, estudios Papanicolaou, chequeos ginecológicos.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">🧐 Obstetricia</div>
+        <div class="accordion-content">Control prenatal, ultrasonidos, educación perinatal, atención en embarazo de bajo y alto riesgo.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">👶 Pediatría</div>
+        <div class="accordion-content">Control del desarrollo infantil, vacunas, revisiones, prevención de enfermedades y orientación para madres/padres.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title">🩺 Medicina General</div>
+        <div class="accordion-content">Valoración inicial, seguimiento a condiciones generales de salud, chequeos básicos y canalización a especialidades.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Agendar Cita Médica</h2>
+      <form id="form">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <select name="sexo" required>
+          <option value="">Selecciona sexo</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <select name="especialidad" required>
+          <option value="">Selecciona especialidad</option>
+          <option value="Ginecología">Ginecología</option>
+          <option value="Obstetricia">Obstetricia</option>
+          <option value="Pediatría">Pediatría</option>
+          <option value="Medicina General">Medicina General</option>
+        </select>
+        <input type="date" name="fecha" required>
+        <input type="time" name="hora" required>
+        <textarea name="comentarios" placeholder="Comentarios adicionales (opcional)"></textarea>
+        <button type="submit">Agendar cita</button>
+        <div class="success-message" id="success">👍 Gracias, tu cita ha sido agendada.<br>⏳ Redirigiendo al inicio...<br>🎉 Te contactaremos pronto.</div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.accordion-title').forEach(item => {
+      item.addEventListener('click', () => {
+        const content = item.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    const form = document.getElementById('form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch('https://script.google.com/macros/s/AKfycbzRvON-twzFcctdsZtkycZCeQaZZHOpJMBMHStxd70iHp0K61M6_Y7zpB5Ft47DhXzF/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.ok ? res.text() : Promise.reject(res.statusText))
+      .then(() => {
+        const success = document.getElementById('success');
+        success.style.display = 'block';
+        setTimeout(() => {
+          success.style.display = 'none';
+          form.reset();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 5000);
+      })
+      .catch(err => alert('Error al enviar: ' + err));
+    });
+  </script>
+</body>
+</html>
